@@ -72,7 +72,13 @@
 % ---------------------------------------------------------------------
 % GRAPHICS
 % ---------------------------------------------------------------------
-\usepackage[pdftex]{graphicx}
+\usepackage{ifpdf}
+\ifpdf
+	\usepackage[pdftex]{graphicx}
+\else
+	\usepackage[dvips]{graphicx}
+\fi
+
 \graphicspath{{98-figures/}}
 
 % ---------------------------------------------------------------------
@@ -97,3 +103,4 @@ bibencoding=auto
 % MISCELLANEOUS
 % ---------------------------------------------------------------------
 \usepackage{lipsum}
+\usepackage{todonotes}
