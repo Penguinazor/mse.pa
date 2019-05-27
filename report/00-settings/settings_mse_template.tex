@@ -72,6 +72,7 @@
 % ---------------------------------------------------------------------
 % GRAPHICS
 % ---------------------------------------------------------------------
+\usepackage{float}
 \usepackage{ifpdf}
 \ifpdf
 	\usepackage[pdftex]{graphicx}
@@ -87,13 +88,17 @@
 \usepackage{hyperref}
 \usepackage{url}
 
-\usepackage[
-backend=biber,
-style=numeric,
-sorting=none,
-bibencoding=auto
-]{biblatex}
-\addbibresource{03-tail/bibliography.bib}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\bibliography{03-tail/bibliography}
+
+%style=verbose-trad2
+%\usepackage[
+%backend=biber,
+%style=verbose-trad2,%numeric,
+%sorting=none,
+%bibencoding=auto
+%]{biblatex}
+%\addbibresource{03-tail/bibliography.bib}
 
 \usepackage[nonumberlist,acronym,toc,style=altlist]{glossaries}
 \input{01-head/glossary.tex}
