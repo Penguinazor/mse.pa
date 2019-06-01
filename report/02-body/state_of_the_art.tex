@@ -118,27 +118,178 @@ More than a sequential algorithm, narrow artificial intelligence in modern termi
 The next step into the field of \gls{ai}, when supervision has been banned as a teaching method for algorithms as the human interaction is inputting more errors than machine themselves if unsupervised. In addition to teaching themselves, algorithms are teaching each other, and improve over the iteration with auto corrections and optimizations. They are excelling at all tasks requiring repetition, precision, and safety. Besides, they are also all able to retrieve any available information and use it for their need. \say{In the future, machines will be able to understand and do everything, much more efficiently than humans.}
 %\end{minipage}
 
-\section{Word2Vec}
-\subsection{What is Word2Vec}
-\subsection{Gensim}
-\subsection{Framworks}
 
 
-\section{Word Embedding Alternatives}
-\subsection{FastText}
-\subsection{Glove}
-\subsection{Word2Vec-f}
-\subsection{Wang2vec}
+\section{Word Embedding}
+It can be summarised as the vector representation of a word and often using between 100 and 400 dimensions. Its position in the multi-dimensional space keeps track of the word context and semantic to a dictionary of words and the corpora. Due to the vector nature of the words, geometrical operations can be applied to those words to find word similarities and relationship between them. 
 
 
-\section{Sentence/Document Embedding Alternatives}
-\subsection{Doc2vec}
-\subsection{Skip-thought}
-\subsection{Smooth Inverse Frequency}
+\subsection{Word2Vec}
+Published Google in 2013, Word2Vec\cite{article:word2vec}, probably became, the most popular algorithm in the word embedding field, nowadays. It uses a \gls{snn} ~\ref{fig:wikipedia_colored_neural_network_img}, similar to a conventional supervised model. Indeed, it is a two-layer \gls{nn}, its input is text corpora, and its output is word vectors based on a given dictionary. Even if it is easy to train and test, it is often difficult to tweak the algorithm, and as a result, makes it harder to make a good generalization. Even if it is not using \gls{dl} itself as output, the input text form of the words are transformed into their value form, which makes it incredibly powerful and useful for \gls{dnn} algorithms as input.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=6cm,keepaspectratio=true]{500px-Colored_neural_network}
+    \caption{
+       Artificial neural network with layer coloring \cite{wikipedia:colored_neural_network_img}
+    }
+    \label{fig:wikipedia_colored_neural_network_img}
+\end{figure}
+
+
+\subsection{Gensim Framework}
+Since its publication in 2013, Word2Vec\cite{article:word2vec} various actors implemented the algorithm and companies like RaRe Technologies\cite{company:rare-technologies}, specialized in \gls{nlp}, made it easier for Scientist and Hobbyists to jump right in. Which probably influenced increased its popularity by making it accessible for the community instead of big companies, institutions only. In the case of this deepening project, the author will be focusing on the framework made available by RaRe Technologies and more specifically by RaRe Consulting\cite{company:rare-consulting}, Gensim\cite{article:rehurek_lrec}. Other frameworks and solutions are available, they are in the end implementing the same algorithm generating a word2vec model by capturing the context of the words, but they are different by their language and their different integration with custom features.
+
+Gensim is a python implementation of Word2Vec, and it is not a general purpose \gls{ml} or even \gls{dl} framework. However, in order of magnitude, it does one thing, but does it very well, as it does its job faster that Tensorflow\cite{article:tensorflow2015-whitepaper} for instance.
+
+\section{Word2Vec Alternatives}
+Word2Vec does not define Word Embedding, indeed the concept of the vector representation in a multidimensional space has multiple solutions to it. Without going into too many details, and to name a few, the following could be alternatives to Word2Vec, with their pros and cons.
+
+\subsection{Word2Vec\cite{article:word2vec}}
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item First word embedding solution to be able to generate a model on a large corpus with a dictionary containing millions of words.
+    \item Outputs word vectors based on corpora with raw text.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Difficulties to extract the sense of words with multiple meanings depending on the context. e.g., the word \textbf{Doctor}, it could be the Academic Title, a Physician, or even the name of a TV-Show.
+\end{itemize}
+
+\subsection{FastText\cite{article:fasttext}}
+Made by Facebook.
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Same as Word2Vec, expect that technically it use the skip-grams [\ref{sec:skip-gram}] technics to train on characters composing the words instead of CBOW [\ref{sec:cbow}], which traines with words.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Same as Word2Vec, words with multiple meanings are not managed well.
+\end{itemize}
+
+
+\subsection{Glove\cite{article:glove}}
+Global Vectors for Word Representation is a contribution to the Word Embedding by the University of Standford in \gls{nlp}.
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Less time consuming than Word2Vec.
+    \item Depending on the scenario and benchmarks, it sometimes performs better than Word2Vec at tasks related to semantic.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Larger memory usage than Word2Vec.
+    \item Same as Word2Vec for multiple word meanings.
+\end{itemize}
+
+
+\subsection{Adagram\cite{article:adagram}}
+\label{sec:adagram}
+Adaptive Skip-Gram is a Russian contribution by National Research University of Moscow.
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item It claims, contrary to Word2Vec, to be able to manage different word meanings as it should extract the context of the surrounding words.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item In the current state, it is not designed for corpora with a dictionary larger than tens of millions of words.
+    \item Does not keep track of the word order.
+\end{itemize}
+
+
+\section{Word Embedding Extensions}
+Based on the Word Embedding technics, proposals were raised about its extension to the sentences and even documents. A simple solution to generate a sentence/documents representation would be to sum word vectors composing the sentences/documents; however, the following non-exhaustive technics are doing performing better than naive addition.
+
+\subsection{Doc2vec\cite{article:doc2vec}}
+Adaptation of Word2Vec for document embedding.
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Based on Word2Vec.
+    \item Performs well in most cases.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Few cases the embedding could be biased towards the specific content words.\cite{article:doc2vec_eval}
+\end{itemize}
+
+\subsection{Skip-thought\cite{article:skip-thought}}
+Made for corpus with semantically related sentences.
+\paragraph{Pros}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Works with the corpus has a sentence continuity.
+\end{itemize}
+\paragraph{Cons}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Adjacent sentences must be semantically related.
+\end{itemize}
+
 \subsection{RNN}
+With the current market and institutional need to make everything \gls{dl}, the subject of \gls{dnn} must be slightly overviewed. All the technics described previously in this chapter are not using \gls{dnn}, and there is a good reason for their success. Indeed, they do not require labeled data for training, which is required by \gls{dl} algorithms. However, the idea has not been abandoned, solutions are raising to overcome this drawback, such as using crowd-based solution using users as signals to determine document similarities \cite{article:lstm-deep-sentence-embedding}.
+
+
+
+\section{Beyond Word Embedding}
+As \gls{nlp} usage increases over the years, Word Embedding technics and its extensions are becoming increasingly more sophisticated and are getting closer to human-like generalization. As controversially suggested by Geoffrey Hinton, famous \gls{dl} researcher, it would be possible to get to human-like conversational capabilities via a method he calls Thought Vectors \cite{article:thought2vec-geoffrey-hinton}. Without going into exciting details, it implies for the \gls{agi}, at this stage, even if the algorithm does not understand the meaning of the sentences, the reasoning behind a thought would be well enough emulated to make it human-like.
+
+\paragraph{Though Embedding}
+A vectorized thought would be trained to generate a thought’s context. As for Word Embedding and Doc Embedding,  Thought Embedding are linked by a chain of reasoning.
+
+\subsection{Contextual embeddings}
+Though Embedding paper and implementation is yet to be made, however, progress has been made in the direction with the contextual embeddings Context2Vec\cite{article:context2vec}. It is a bidirectional LSTM\cite{article:lstm} unsupervised model generating a word Embedding based on its occurrence in the sentences, which unlike Adagram[\ref{sec:adagram}] is taking into account order. 
+
+
+However, Context2Vec does not define Contextual embeddings. New emerging 2019 algorithms, based on the attention mechanism \cite{article:attention-is-all-you-need}, such as Transformers\cite{article:transformer} or even further its bidirectional extension BERT\cite{article:bert}, which makes LSTM almost obsolete.
+
+\paragraph{Summerized}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Context dependent word embeddings.
+    \item Can generate sentence embeddings.
+    \item The output can be used almost as it is for NLP.
+    \item Tracking using selective "forget" gates.
+\end{itemize}
 
 
 \section{Datasets}
+Nowadays, in the data engineering world, the new gold is data. Luckily, today's world is driven by \gls{bd} world, and almost any kind of data is available to who knows where to look at. For the case of the deepening project, the author is interested in conversational data. Even though the English Wikipedia Dump from 09th May 2019 will be using exclusively, the following is a non-exhaustive list of corpora gathered during the deepening project.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Wikipedia Dumps Index: \url{https://dumps.wikimedia.org/backup-index.html}
+    \item English Wikipedia Dumps (bzip2: 16Gb, raw: 90Gb): \url{https://dumps.wikimedia.org/enwiki/latest/} [enwiki-latest-pages-articles.xml.bz2]
+    \item Reddit Comments (bzip2: 6Gb, raw: 32Gb): \url{https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/}
+    \item The Open American National Corpus: \url{http://www.anc.org}
+    \item Santa Barbara Corpus of Spoken American English: \url{https://www.linguistics.ucsb.edu/research/santa-barbara-corpus}
+    \item Leipzig Corpora Collection \url{http://wortschatz.uni-leipzig.de/en/download/}
+    \item Legal Case Reports: \url{http://archive.ics.uci.edu/ml/datasets/Legal\+Case\+Reports}
+    \item Cornell Newsroom: \url{https://summari.es}
+    \item DeepMind Q\&A: \url{https://cs.nyu.edu/\~kcho/DMQA/}
+    \item Large Movie Review: \url{http://ai.stanford.edu/\~amaas/data/sentiment/}
+    \item Project Gutenberg - Free eBooks: \url{https://www.www.gutenberg.org}
+\end{itemize}
+
+
+\section{Word2Vec Models}
+Training own models are very resource consumptive, and often the resources are not available, it could be datasets or computer power. Luckily, big companies like Google did the work for us, and pre-trained models that could be used out of the box. The following is a non-exhaustive list of models for Word2Vec:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Gensim directory: \url{https://github.com/RaRe-Technologies/gensim-data/releases}
+    \item Fasttext: \url{https://fasttext.cc/docs/en/english-vectors.html}
+    \item estnltk: \url{http://ats.cs.ut.ee/keeletehnoloogia/estnltk/word2vec/}
+\end{itemize}
+
 
 % figures
 %h (here) - same location
