@@ -2,12 +2,12 @@
 \label{chap:state-of-the-art}
 
 \section{Chatbots}
-From a user point of view, chatbots are trendy nowadays, big companies such as \textit{Google} or \textit{Apple} are pushing to make the technology mainstream. Even if not every lambda people understand the word \say{chatbot}, they all have at least a mental representation of it. Indeed, they could call it Digital Assistant, Siri, Ok Google, and so on, in the end, they all understood the concept of an artificial intelligence narrowed to more or less human-like conversations.
+From a user point of view, chatbots are trendy nowadays. Big companies such as \textit{Google} or \textit{Apple} are pushing to make the technology mainstream. Even if not every lambda people understand the word \say{chatbot}, they all have at least a mental representation of it. Indeed, whether they call it Digital Assistant, Siri, Ok Google, and so on, in the end, they all get the concept of an \gls{ai} narrowed to more or less human-like conversations.
 
 \subsection{History of Chatbots}
-When are they coming from? Not mentioning \textit{Alan Turing} or \textit{Joseph Weizenbaum}, considered as the fathers of \gls{ai} and chatbots, would not be fair. Indeed, they forecasted in 1950, that computers would be able to use human-like communication and they proposed a test to distinguish humans from machines, called the Turing Test\cite{paper:turing}. Where a human is asked to talk to a masked entity, and determine if it is talking to a human or a computer. If the human cannot determine who is the computer, then the machine passed the Turing test, as seen on figure ~\ref{fig:wikipedia_turing_test_img}. 
+From when are they coming? Not mentioning \textit{Alan Turing} or \textit{Joseph Weizenbaum}, considered as the fathers of \gls{ai} and chatbots, would not be fair. Indeed, they forecasted in 1950, that computers would be able to use human-like communication and they proposed a test to distinguish humans from machines, called the Turing Test\cite{paper:turing}: where a human is asked to talk to a masked entity and determine if it is talking to a human or a computer. If the human cannot determine who is the computer, then the machine passed the Turing test, as seen on figure ~\ref{fig:wikipedia_turing_test_img}. 
 
-In 1966, Joseph Weizenbaum wrote Eliza, a computer program simulating a psychotherapist, seen as one of the first well-known attempts to make a chatbot passing Turing test. Note that due to technical restrictions, Eliza is not performing well at all time. As it is for today, it is possible to play with it at on a dedicated website. \cite{chatbot:eliza}
+In 1966, Joseph Weizenbaum wrote Eliza\cite{chatbot:eliza}, a computer program simulating a psychotherapist, seen as one of the first well-known attempts to make a Chatbot passing Turing test. Note that due to technical restrictions, Eliza is not performing well at all time. As it is for today, it is possible to play with it at on a dedicated website.
 
 Since Eliza, a lot of progress has been made, indeed, to only cite a few noticeable chatbots: \textit{Parry}\cite{chatbot:parry} (1972), \textit{Jabberwack}\cite{chatbot:jabberwack} (1988), \textit{Dr. Sbaitso}\cite{chatbot:dr-sbaitso} (1991), \textit{A.L.I.C.E}\cite{chatbot:alice} (1995), \textit{Smarterchild}\cite{chatbot:smarterchild} (2001), \textit{Watson}\cite{chatbot:watson} (2006), \textit{Siri}\cite{chatbot:siri} (2010), \textit{OK Google}\cite{chatbot:google} (2012), \textit{Alexa}\cite{chatbot:alexa} (2014), \textit{Cortana}\cite{chatbot:cortana} (2014), Facebook Bots\cite{chatbot:facebook} (2016), and \textit{Tay}\cite{chatbot:tay} (2016), which where all part of the Chatbot history \cite{chatbot:futurism_history_infography}.
 
@@ -25,10 +25,10 @@ From IF-ELSE, \gls{aiml}, up to \gls{ml} with \gls{ann} and \gls{dnn}, the impro
 \subsection{Narrow Chatbots}
 Once again, chatbots are almost everywhere nowadays. Indeed, it became a common tool for companies of any size to communicate with their customers and a toy for users. However, most of the time, Chatbots are not understood by their users and is leading to a high level of frustration. Even if they are becoming increasingly mainstream and sophistical, people do not realize their limits. Today's chatbots are often mistaken for \gls{agi} in \gls{scifi} and are expected to do much more than they can do. Indeed, making \gls{ani} chatbots implies a specialization into a specific field.
 
-Not to forget that the primary purpose of chatbots is to provide a conversational service to the user from text to vocal or even visual format. However, its purpose can derivated in an almost unlimited amount of solutions such as Health, Weather, Customer Service, Games, and much more.
+Not to forget that the primary purpose of chatbots is to provide a conversational service to the user from text to vocal or even visual format. However, its purpose can be derivated in an almost unlimited amount of solutions such as Health, Weather, Customer Service, Games, and much more.
 
 \subsection{\gls{ir} Chatbots}
-Most of the time used by \gls{faq} chatbots, which are probably the most common type of chatbots, its goal is to answer specific questions, based on a specific keyword. Indeed, the communication skills are limited to pre-made sentences and a question/answer database, which often results in the best case scenario in a perfect match, or the worst case scenario would be the return of something unexpected.
+Most of the time used by \gls{faq} chatbots, which are probably the most common type of chatbots, its goal is to answer specific questions, based on a specific keyword. Indeed, the communication skills are limited to pre-made sentences and a question/answer database, which often results, in the best case scenario, in a perfect match, or the worst case scenario, in the return of something unexpected.
 
 Technically speaking, \gls{ir} is part of the \gls{dm} in the field of \gls{ml}. It is well suited for search engines, as it works in a query mode. Indeed, the algorithm tries to find the best match to the submitted query in its database, usually with pattern extraction and a rank. 
 
@@ -37,21 +37,21 @@ Technically speaking, \gls{ir} is part of the \gls{dm} in the field of \gls{ml}.
 This sentence is a good example of the concept of sequential chatbots. From a communication point of view, it does not have to talk to accomplish its purpose; it is indeed usually based on a keyword detection technic to determine what pre-made action to do. However, as the whole system works on pre-made actions, the development of such algorithms requires a lot of brain power from the developers. Indeed, as all actions result from anticipated specific keywords, and even specific order of keywords, the complexity can quickly increase, which most of the time, makes sequential chatbots seen as command line terminals instead of conversational chatbots.
 
 \subsection{Forwarding Chatbots}
-Often used by companies for customer service, it has become the most popular type of chatbots and seen as a hybridization of the \gls{ir} and sequential chatbots. Its goal is to simulate an agent that is available 24/7 to help the customer. Indeed, it will try its best to answer the most popular questions based on its \gls{faq} database and forward the user seamlessly to a human agent if its knowledge is getting limited. In the best case scenario, it is greatly appreciated by the user as the transition from chatbot to human is not noticeable.
+Often used by companies for customer service, it has become the most popular type of chatbots and seen as a hybridization of the \gls{ir} and sequential chatbots. Its goal is to simulate an agent that is available 24/7 to help the customer. Indeed, it will try its best to answer the most popular questions based on its \gls{faq} database and forward the user seamlessly to a human agent if its knowledge is getting limited. In the best case scenario, it is greatly appreciated by the user as the transition from Chatbot to human is not noticeable.
 
 \subsection{Learning Chatbots} 
-As \gls{ml} evolves at an incredible rate and boosted by \gls{dnn}, new \gls{nlp} algorithms emerges, and most of the time leaves the previous generation far behind. Modern learning chatbots algorithms are what comes closer to human-like conversations. Leaving the algorithm alone progress through iterations on a large dataset or commonly named \gls{bd} of real conversations, it will learn patterns by itself. However, the output generated by the trained model is dependent on the data the training occurred on. The most well-known example is \textit{Tay}\cite{chatbot:tay} (2016), the Twitter chatbot from Microsoft, that was influenced by the 4chan community to make it speak like a Young Racist Girl.
-However, it is essential to take note that learning chatbots are exciting for a long time now. \textit{A.L.I.C.E}\cite{chatbot:alice} had already basic learning skills, as \gls{aiml} was taking care of saving variable on the run, such as the first name of the user. Even if this methodology could be seen archaic if compared to new \gls{dl} algorithms such as LSTM, it is still used today likewise the \gls{aiml} technology.
+As \gls{ml} evolves at an incredible rate and is boosted by \gls{dnn}, new \gls{nlp} algorithms emerges, and most of the time leaves the previous generation far behind. Modern learning chatbots algorithms are what come closer to human-like conversations. Leaving the algorithm progress alone through iterations on a large dataset or commonly named \gls{bd} of real conversations, it will learn patterns by itself. However, the output generated by the trained model is dependent on the data the training occurred on. The most well-known example is \textit{Tay}\cite{chatbot:tay} (2016), the Twitter chatbot from Microsoft, that was influenced by the 4chan community to make it speak like a Young Racist Girl.
+However, it is essential to take note that learning chatbots have been existing for a long time now. \textit{A.L.I.C.E}\cite{chatbot:alice} had already basic learning skills, as \gls{aiml} was taking care of saving variable on the run, such as the first name of the user. Even if this methodology could be seen archaic if compared to new \gls{dl} algorithms such as LSTM, it is still used today likewise the \gls{aiml} technology.
 
 
 \subsection{Proactive Chatbots}
-\say{Hey, I saw that you are on the website for some minutes now, do you need some more dedicated information?}. It is almost impossible that someone never received a message alike. Indeed, proactivity is not new in the field of chatbots, mimicking an interest from the chatbot to initiate conversations has become a standard in marketing and customer support chatbots. However, the limitations are hit fast, beyond asking general questions, not much progress has been made until now.
+\say{Hey, I saw that you are on the website for some minutes now, do you need some more dedicated information?}. It is almost impossible that someone never received a message alike. Indeed, proactivity is not new in the field of chatbots. Mimicking an interest from the Chatbot to initiate conversations has become a standard in marketing and customer support chatbots. However, the limitations are hit fast, beyond asking general questions, not much progress has been made until now.
 
 True proactive chatbots are implying that the algorithm is capable of initiating conversations from a human-like perspective, initiating the conversation or asking information in a meaningful manner based on the user, the context and the relationship with the user. The state-of-the-art search could not find any evidence of existing real proactive chatbots as described.
 
 
 \subsection{Chatbot Examples}
-As a help to get a feeling about narrow chatbots, a none-exhaustive list of applications is available below, and for more references about chatbots, Chatbot.org\cite{chatbot:chatbots-org} is an excellent, up to date, place about referencing old and new chatbots.
+As a help to get a feeling about narrow chatbots, a none-exhaustive list of applications is available below, and for more references about chatbots, Chatbot .org\cite{chatbot:chatbots-org} is an excellent, up to date, place about referencing old and new chatbots.
 
 \begin{itemize}
 \setlength\itemsep{0em}
@@ -102,22 +102,81 @@ Health, Weather, Customer Service, or Games are just a few knowledge examples ch
 
 %\begin{minipage}{\textwidth}
 \subsection{General Chatbots}
-Much effort is being made to get chatbots able to perform well simultaneously in various tasks and knowledge. Indeed, general chatbots should are not limited to previously learned tasks and subjects; they should also be able to learn and relearn. 
+Much effort is being made to get chatbots that can perform well simultaneously in various tasks and knowledge. Indeed, general chatbots are not limited to previously learned tasks and subjects; they should also be able to learn and relearn. 
 Those type of chatbots have not been found during the state of the art phase, and are probably by this mean either none-existant at the moment or hidden in laboratories, far from public knowledge. 
 However, big companies like Amazon are providing to the public a feel of general chatbots with \textit{Alexa}\cite{chatbot:alexa}. Users can converse with it, command their smart houses, use it as a personal assistant, and even program it to perform custom actions. However, it is not yet able to learn by itself and generate out of the blue none-programmed skills.
 Note that general chatbots could be scary for lambda people if it starts mimicking human being too well, as in the user mind, talking to a machine should be differentiable from talking to humans. Admittedly, in the case of the \textit{Turing Test}\cite{paper:turing}, the human does not know if it is talking to a human or a machine, which makes it probably more comfortable to accept than talking to a machine directly. \gls{scifi} is conditioning people to believe that human-like performing machines are dangerous for the human species.
 
 
 \subsection{From \gls{ani} to \gls{agi}}
-On a side, even if it is not part of the deepening project. It is interesting to write a few lines about \gls{ai}. New incredible algorithms outperforming the previous one, and experiments reports are emerging almost every month and redefining the standard of \gls{ai}. Paradigms are shifting and technologically speaking; we are entering a new era of computer-assisted humankind.
+On a side, even if it is not part of the deepening project, it is interesting to write a few lines about \gls{ai}. New incredible algorithms outperforming the previous one, and experiments reports are emerging almost every month and redefining the standard of \gls{ai}. Paradigms are shifting and technologically speaking; we are entering a new era of computer-assisted humankind.
 
 \subsection{\gls{ani}}
-More than a sequential algorithm, narrow artificial intelligence in modern terminology is the definition of \say{being good at something}. \gls{ani} has been made possible with the huge progress in \gls{ml}, the arrival of the \gls{dl}, and the need for humans to store data about everything (\gls{bd}). In medicine, for instance, it is sometimes performing so well, that humans, who spent years studying are left behind by an algorithm trained large datasets for a few days.
+More than a sequential algorithm, narrow artificial intelligence in modern terminology is the definition of \say{being good at something}. \gls{ani} has been made possible with the huge progress in \gls{ml}, the arrival of the \gls{dl}, and the need for humans to store data about everything (\gls{bd}). In medicine, for instance, it is sometimes performing so well, that humans, who spent years studying are left behind by an algorithm trained on large datasets for a few days.
 
 \subsection{\gls{agi}}
 The next step into the field of \gls{ai}, when supervision has been banned as a teaching method for algorithms as the human interaction is inputting more errors than machine themselves if unsupervised. In addition to teaching themselves, algorithms are teaching each other, and improve over the iteration with auto corrections and optimizations. They are excelling at all tasks requiring repetition, precision, and safety. Besides, they are also all able to retrieve any available information and use it for their need. \say{In the future, machines will be able to understand and do everything, much more efficiently than humans.}
 %\end{minipage}
 
+
+\section{\gls{nlp}}
+Present in our daily lives, this technology is used massively to automate the extract information from human communication. In other words, it is seen as the given skill to machines to comprehend human language.
+
+\paragraph{Examples}
+The following is an non-exhaustive list of \gls{nlp} use:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Customer Support Chatbots
+    \item Translation into foreign languages
+    \item Voice recognition
+    \item Spam filters
+    \item Interpret written queries
+    \item Generate the responses
+\end{itemize}
+
+\subsection{\gls{nl}}
+Naively, it is the language naturally used by humans. The goal of the \gls{nlp} is to mimic the \gls{nl} to create a human-like verbal interaction. However, it is not an easy task as it is nearly not possible to teach a machine to talk like a human. Indeed, even if a machine was given the same language rules as humans, they do not understand by themselves, they are just applying the rules, which results in a problem during ambiguities. It would be necessary to sequentially teach the missing pieces of information, which would result in an almost an unlimited amount of conditions.
+
+\paragraph{\gls{nl} decomposition}
+Beyond the grammar and orthography, human language is composed of an incredible amount of subtleties, which makes sense most of the time intuitively for humans, but not for machines. To help understand the complexity behind \gls{nl}, the following are list expresses the foundation of human language:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Semantics: express the relations between words, sentences, paragraphs, etc.
+    \item Morphology: maintain a structure and the content of word forms
+    \item Phonology: sounds used to express words
+    \item Syntax: rules applied to the bag of words to create valid texts
+    \item Pragmatics: how the context influences the meaning words
+\end{itemize}
+
+
+
+\subsection{Current \gls{nlp} technics}
+Most of the following technics have been developed in the \gls{ir} field.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \gls{tf-idf}: Used to set the word importance in corpora.
+    \item \gls{cbow} [\ref{sec:cbow}]: Counts the words occurrences throughout in corpus.
+    \item Skip-Grams [\ref{sec:skip-grams}]: Counts the occurrences of the character throughout in corpus.
+    \item Topic modeling: Text clustering providing meaningful information to discover hidden structures via text chunking to identify the parts of the sentence in relation to each other.
+    \item Segmentation: Split corpus into predefined parts, such as: \textit{sentences, paragraphs, chapters, etc.}
+    \item Tokenization: Split the sentences into words.
+    \item Tagging: Based on a pre-made dictionary, it gives a new layer of meaning to the word, such as: \textit{verb, adverb, noun, people name, locations, number, etc.}
+    \item Dictionary: Use of tokenized words to build a dictionary, which could contain the word occurrences.
+    \item Stop Words: Ignoring words only used as liaisons, and does not contain information, such as: \textit{and, or, etc.}
+    \item Stemming: Uniformizing words to their root by removing the prefix and suffix, such as: \textit{remake and loveable}.
+    \item Lemmatization: Replace the words to their base form, such as \textit{conjugated verb}.
+\end{itemize}
+
+\subsection{\gls{nlp} declensions}
+Further, into the field of \gls{nlp}, it is today commonly split into two groups:
+
+\paragraph{\gls{nlu}}
+It is a subdivision of \gls{dm}, and it involves the processing of the text by analyzing its content by extracting relevant information, usually called keywords.
+
+\paragraph{\gls{nlg}}
+In combination with \gls{nlu}, often applied to text classification, \gls{nlg} is useful to generate custom sentences using custom keyword extracted to make the response to a query even more relevant and usually keeps track of the context.
 
 
 \section{Word Embedding}
@@ -138,12 +197,12 @@ Published Google in 2013, Word2Vec\cite{article:word2vec}, probably became, the 
 
 
 \subsection{Gensim Framework}
-Since its publication in 2013, Word2Vec\cite{article:word2vec} various actors implemented the algorithm and companies like RaRe Technologies\cite{company:rare-technologies}, specialized in \gls{nlp}, made it easier for Scientist and Hobbyists to jump right in. Which probably influenced increased its popularity by making it accessible for the community instead of big companies, institutions only. In the case of this deepening project, the author will be focusing on the framework made available by RaRe Technologies and more specifically by RaRe Consulting\cite{company:rare-consulting}, Gensim\cite{article:rehurek_lrec}. Other frameworks and solutions are available, they are in the end implementing the same algorithm generating a word2vec model by capturing the context of the words, but they are different by their language and their different integration with custom features.
+Since its publication in 2013, Word2Vec\cite{article:word2vec} various actors implemented the algorithm and companies like RaRe Technologies\cite{company:rare-technologies}, specialized in \gls{nlp}, made it easier for Scientist and Hobbyists to jump right in. Which probably influenced increased its popularity by making it accessible for the community instead of big companies, institutions only. In the case of this deepening project, the author will be focusing on the framework made available by RaRe Technologies and more specifically by RaRe Consulting\cite{company:rare-consulting}, Gensim\cite{article:rehurek_lrec}. Other frameworks and solutions are available, they are in the end implementing the same algorithm generating a Word2Vec model by capturing the context of the words, but they are different by their language and their different integration with custom features.
 
 Gensim is a python implementation of Word2Vec, and it is not a general purpose \gls{ml} or even \gls{dl} framework. However, in order of magnitude, it does one thing, but does it very well, as it does its job faster that Tensorflow\cite{article:tensorflow2015-whitepaper} for instance.
 
 \section{Word2Vec Alternatives}
-Word2Vec does not define Word Embedding, indeed the concept of the vector representation in a multidimensional space has multiple solutions to it. Without going into too many details, and to name a few, the following could be alternatives to Word2Vec, with their pros and cons.
+Word2Vec does not define Word Embedding; indeed the concept of the vector representation in a multi-dimensional space has multiple solutions to it. Without going into too many details, and to name a few, the following could be alternatives to Word2Vec, with their pros and cons.
 
 \subsection{Word2Vec\cite{article:word2vec}}
 \paragraph{Pros}
@@ -163,7 +222,7 @@ Made by Facebook.
 \paragraph{Pros}
 \begin{itemize}
     \setlength\itemsep{0em}
-    \item Same as Word2Vec, expect that technically it use the skip-grams [\ref{sec:skip-gram}] technics to train on characters composing the words instead of CBOW [\ref{sec:cbow}], which traines with words.
+    \item Same as Word2Vec, expect that technically it use the Skip-Grams [\ref{sec:skip-grams}] technics to train on characters composing the words instead of \gls{cbow} [\ref{sec:cbow}], which traines with words.
 \end{itemize}
 \paragraph{Cons}
 \begin{itemize}
@@ -205,7 +264,7 @@ Adaptive Skip-Gram is a Russian contribution by National Research University of 
 
 
 \section{Word Embedding Extensions}
-Based on the Word Embedding technics, proposals were raised about its extension to the sentences and even documents. A simple solution to generate a sentence/documents representation would be to sum word vectors composing the sentences/documents; however, the following non-exhaustive technics are doing performing better than naive addition.
+Based on the Word Embedding technics, proposals were raised about its extension to the sentences and even documents. A simple solution to generate a sentence/documents representation would be to sum word vectors composing the sentences/documents; however, the following non-exhaustive technics are performing better than naive addition.
 
 \subsection{Doc2vec\cite{article:doc2vec}}
 Adaptation of Word2Vec for document embedding.
@@ -218,7 +277,7 @@ Adaptation of Word2Vec for document embedding.
 \paragraph{Cons}
 \begin{itemize}
     \setlength\itemsep{0em}
-    \item Few cases the embedding could be biased towards the specific content words.\cite{article:doc2vec_eval}
+    \item In few cases the embedding could be biased towards the specific content words.\cite{article:doc2vec_eval}
 \end{itemize}
 
 \subsection{Skip-thought\cite{article:skip-thought}}
@@ -226,7 +285,7 @@ Made for corpus with semantically related sentences.
 \paragraph{Pros}
 \begin{itemize}
     \setlength\itemsep{0em}
-    \item Works with the corpus has a sentence continuity.
+    \item Works well with corpus having a sentence continuity.
 \end{itemize}
 \paragraph{Cons}
 \begin{itemize}
@@ -235,7 +294,7 @@ Made for corpus with semantically related sentences.
 \end{itemize}
 
 \subsection{RNN}
-With the current market and institutional need to make everything \gls{dl}, the subject of \gls{dnn} must be slightly overviewed. All the technics described previously in this chapter are not using \gls{dnn}, and there is a good reason for their success. Indeed, they do not require labeled data for training, which is required by \gls{dl} algorithms. However, the idea has not been abandoned, solutions are raising to overcome this drawback, such as using crowd-based solution using users as signals to determine document similarities \cite{article:lstm-deep-sentence-embedding}.
+With the current market and institutional need to make everything \gls{dl}, the subject of \gls{dnn} must be slightly overviewed. All the technics described previously in this chapter are not using \gls{dnn}, and there is a good reason for their success. Indeed, they do not require labeled data for training, which is required by \gls{dl} algorithms. However, the idea has not been abandoned; solutions are raising to overcome this drawback, such as using crowd-based solution using users as signals to determine document similarities \cite{article:lstm-deep-sentence-embedding}.
 
 
 
@@ -243,7 +302,7 @@ With the current market and institutional need to make everything \gls{dl}, the 
 As \gls{nlp} usage increases over the years, Word Embedding technics and its extensions are becoming increasingly more sophisticated and are getting closer to human-like generalization. As controversially suggested by Geoffrey Hinton, famous \gls{dl} researcher, it would be possible to get to human-like conversational capabilities via a method he calls Thought Vectors \cite{article:thought2vec-geoffrey-hinton}. Without going into exciting details, it implies for the \gls{agi}, at this stage, even if the algorithm does not understand the meaning of the sentences, the reasoning behind a thought would be well enough emulated to make it human-like.
 
 \paragraph{Though Embedding}
-A vectorized thought would be trained to generate a thought’s context. As for Word Embedding and Doc Embedding,  Thought Embedding are linked by a chain of reasoning.
+A vectorized thought would be trained to generate a thought's context. As for Word Embedding and Doc Embedding,  Thought Embedding are linked by a chain of reasoning.
 
 \subsection{Contextual embeddings}
 Though Embedding paper and implementation is yet to be made, however, progress has been made in the direction with the contextual embeddings Context2Vec\cite{article:context2vec}. It is a bidirectional LSTM\cite{article:lstm} unsupervised model generating a word Embedding based on its occurrence in the sentences, which unlike Adagram[\ref{sec:adagram}] is taking into account order. 
@@ -251,7 +310,7 @@ Though Embedding paper and implementation is yet to be made, however, progress h
 
 However, Context2Vec does not define Contextual embeddings. New emerging 2019 algorithms, based on the attention mechanism \cite{article:attention-is-all-you-need}, such as Transformers\cite{article:transformer} or even further its bidirectional extension BERT\cite{article:bert}, which makes LSTM almost obsolete.
 
-\paragraph{Summerized}
+\paragraph{Summarized}
 \begin{itemize}
     \setlength\itemsep{0em}
     \item Context dependent word embeddings.
@@ -262,7 +321,7 @@ However, Context2Vec does not define Contextual embeddings. New emerging 2019 al
 
 
 \section{Datasets}
-Nowadays, in the data engineering world, the new gold is data. Luckily, today's world is driven by \gls{bd} world, and almost any kind of data is available to who knows where to look at. For the case of the deepening project, the author is interested in conversational data. Even though the English Wikipedia Dump from 09th May 2019 will be using exclusively, the following is a non-exhaustive list of corpora gathered during the deepening project.
+Nowadays, in data engineering, the new gold is data. Luckily, today is driven by \gls{bd}, and almost any kind of data is available to who knows where to look at. For the case of the deepening project, the author is interested in conversational data. Even though the English Wikipedia Dump from 09th May 2019 will be using exclusively, the following is a non-exhaustive list of corpora gathered during the deepening project.
 
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -290,11 +349,4 @@ Training own models are very resource consumptive, and often the resources are n
     \item estnltk: \url{http://ats.cs.ut.ee/keeletehnoloogia/estnltk/word2vec/}
 \end{itemize}
 
-
-% figures
-%h (here) - same location
-%t (top) - top of page
-%b (bottom) - bottom of page
-%p (page) - on an extra page
-%! (override) - will force the specified location
 
