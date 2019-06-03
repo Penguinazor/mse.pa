@@ -81,7 +81,7 @@ Concerning the prediction quality, its measure requires to provide the hot encod
 
 \subsection{Skip-Grams}
 \label{analyse:skip-grams}
-Introduced by facebook, Fasttext\cite{article:fasttext} Word Embedding is using a variant of \gls{cbow} that looks like its flipped version, as seen on figure \ref{fig:wikipedia_cbow_skipgram_img}. It also involves a \gls{nn}, but instead of predicting the word based on the context, it predicts the context based on the word.\\
+Introduced by Facebook, Fasttext\cite{article:fasttext} Word Embedding is using a variant of \gls{cbow} that looks like its flipped version, as seen on figure \ref{fig:wikipedia_cbow_skipgram_img}. It also involves a \gls{nn}, but instead of predicting the word based on the context, it predicts the context based on the word.\\
 
 Given the target word vector as input, the model outputs the probability distribution for the given word.
 
@@ -108,7 +108,7 @@ Using around 200 dimensions provides acceptable accuracy for the time spent comp
 Around 300 dimensions, the results are considered very good; however, the time is high.
 
 \paragraph{Beyond high accuracy}
-It seems that beyond 300 dimensions the accuracy gain is not worth anymore the extra time used during training.\\
+It seems that beyond 300 dimensions, the accuracy gain is not worth anymore the extra time used during training.\\
 
 In other words, the amount of dimensions usually reflects the over and underfitting of the model. Each model is dependent on the dataset, and it is often required to test the different number until the accuracy is acceptable. Plus, as this subject is still debated at the moment in the \gls{ml} community, there is no absolute value, except try and fail.
 
@@ -121,14 +121,14 @@ By default, the value of  5 of the window is used and generally works well; howe
 
 As a measure, the analogy score could be used. However, this score is often not the solution as the impact of the quality of a poor dataset is higher than the size of the window if using the default value. Plus it is essential to be careful with the sentence sizes of the corpus used; indeed, if the window value is higher to the average sentences length, the algorithm will not capture meaningful relations. \\
 
-In other words, large windows size usually capture more information related to the main topic, and small windows are capturing the information related to the word itself.
+In other words, large windows size usually capture more information related to the main topic, and small windows capture the information related to the word itself.
 
 
 \subsection{Epochs}
 \label{analyse:epochs}
 As the number of epochs is directly proportional to the amount of computation and time spent training the model, the common question to ask is: \textit{How much epochs will be giving the best accuracy for the time spent?} The answer is as always: it depends on the dataset and the parameters. \\
 
-However, based on various sources, including the author of Gensim\cite{article:word2vec-epochs}, it is suggested that increasing the number of epochs have, in most of the case, an accuracy performance. The default value is usually five epochs.\\
+However, based on various sources, including the author of Gensim\cite{article:word2vec-epochs}, it is suggested that increasing the number of epochs have, in most of cases, an accuracy performance. The default value is usually five epochs.\\
 
 Finally, the quest to find the right parameters is still a matter of experimentations.
 
@@ -153,16 +153,16 @@ However, to initiate the curiosity of the reader, the following list represents 
 \label{analyse:retrain}
 In \gls{ml}, models are the resulting artifacts from training processes and provide the rules to generate an output for an input. A Word2Vec model is the representation of the relations between the dictionary of words and their contexts for the corpus it was trained on.\\
 
-As seen in the state of the art section, pre-trained Word2Vec models are available on the internet [\ref{sota:word2vec-models}]. However, to save disk space and probably business knowledge, it is infrequent that the full model is shared. Indeed, the model provided an only a model with frozen \gls{ann} weights, which is perfectly fine for regular usage as it behaves the same as a full model, except that it is not containing the multi-dimensional matrix representing the Word2Vec space.\\
+As seen in the state of the art section, pre-trained Word2Vec models are available on the internet [\ref{sota:word2vec-models}]. However, to save disk space and probably business knowledge, it is infrequent that the full model is shared. Indeed, the model provided is only a model with frozen \gls{nn} weights, which is perfectly fine for regular usage as it behaves the same as a full model, except that it is not containing the multi-dimensional matrix representing the Word2Vec space.\\
 
 To get the full model, it requires to train it ourselves, with all the side-effects it implies, such as having a high amount of power and time consumption. However, a full model provides the ability to \textit{retrain} the model. One could add words to the dictionary or customize the weights to match a new verbal style or context. For instance, starting from on a Wikipedia model, it would be possible to influence the words to match the style of an author such as \textit{Edgar Allan Poe}.
 
 
 \subsection{Evaluation}
 \label{analyse:evaluation}
-Determining if the model makes works correctly is difficult, a naive solution would be to create a complex supervised protocol to evaluate the success of a model. However, it would not require an enormous amount of work from a human perceptive. A solution is to exploit the analogies capabilities from Word2Vec \ref{analyse:analogies}, which, in theory, should perform well at.\\
+Determining if the model works correctly is difficult. A naive solution would be to create a complex supervised protocol to evaluate the success of a model. However, it would not require an enormous amount of work from a human perceptive. A solution is to exploit the analogies capabilities from Word2Vec \ref{analyse:analogies}, which, in theory, should perform well at.\\
 
-The concept is called the \textit{Analogy Evaluation} and it uses a list of pre-made analogies in various domaines, such as the famous: \textbf{Man is to King, as Woman is to?}, and evaluate if the results from the model match the expect answer: \textit{Queen}. In Gensim, the following function does the evaluation: 
+The concept is called the \textit{Analogy Evaluation} and it uses a list of pre-made analogies in various domaines, such as the famous: \textbf{Man is to King, as Woman is to?}, and evaluates if the results from the model match the expect answer: \textit{Queen}. In Gensim, the following function does the evaluation: 
 %[language=Python]
 \begin{lstlisting}
 evaluate_word_analogies(analogies,

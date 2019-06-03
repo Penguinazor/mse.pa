@@ -123,7 +123,7 @@ However, even with the used workaround, the time to train the whole dataset took
 \label{experiment:aws}
 With the hope to solve the author's local machines [\ref{experiment:local-machines}] limitations and to decrease drastically the time spent on the iColab GPU Server [\ref{experiment:icolab}], the author tried deploying a virtual machine on the \gls{aws} EC2 service\cite{article:aws-ec2-dl-install}.\\
 
-The outcome was not satisfying at all. Indeed, the author account at \gls{aws} is restricted from powerful machines \cite{article:aws-ec2-service-limits}. Indeed, useful machines for the project with a high amount of RAM and CPUs were not available to use. \\
+The outcome was not satisfying at all. Indeed, the author's account at \gls{aws} is restricted from powerful machines \cite{article:aws-ec2-service-limits}. Indeed, useful machines for the project with a high amount of RAM and CPUs were not available to use. \\
 
 However, for the sake of the experiment, the author tried the largest machine available to him, the c4.8xlarge \cite{article:aws-ec2-pricing}. Except for being expensive; the results were not as good as it should have been expected: indeed the performance was similar to the iColab GPU Server.
 
@@ -224,7 +224,7 @@ To profit the most from the CPU Dedicated Server, and as building Wikipedia mode
 
 
 \subsection{Visual Representation}
-To get a hold on what a Word2Vec model, the author implemented a visual representation of the multi-dimensional space using the T-SNE \cite{article:tsne} technic, which flatters high dimensional points into a two-dimensional space. For example the top 100 similar vectors to the word \textit{Woman} on the figure \ref{fig:tsne-top100-woman}.
+To get a hold on what a Word2Vec model is, the author implemented a visual representation of the multi-dimensional space using the T-SNE \cite{article:tsne} technic, which flatters high dimensional points into a two-dimensional space. For example, the top 100 similar vectors to the word \textit{Woman} on the figure \ref{fig:tsne-top100-woman}.
 
 \paragraph{Notebook in Appendices}
 \begin{itemize}
@@ -263,7 +263,7 @@ As part of the \gls{dp} red line [\ref{questions:redline}], it was asked to expl
 \subsection{Sentence Generator}
 To explore the possibilities of proactivity, the author tried to used geometric operations [\ref{analyse:geometric-operations}] to generate sentences. Various vector manipulations were used to alternate and generate new sentences out of \textit{Proverbs} and \textit{Facts}, such as word additions, arbitrary value subtractions, and even the use of random vectors. \\
 
-The idea was that to make a chatbot proactive; it needs to be able to generate sentences out of a meaningful context. Moreover, a solution was to make a sentence generator of facts, based on real proverbs and facts such as: \textit{Better late than never}, \textit{ There is no place like home} or even \textit{the financial capital of the world is wall street}.\\
+The idea was that, to make a chatbot proactive, it needs to be able to generate sentences out of a meaningful context. Moreover, a solution was to make a sentence generator of facts, based on real proverbs and facts such as: \textit{Better late than never}, \textit{ There is no place like home} or even \textit{the financial capital of the world is wall street}.\\
 
 However, the quality of the results was intuitively not excellent and hard to quantify, but as a conclusion, it was found that the most impactful operations are the additions and subtractions.
 
@@ -286,4 +286,4 @@ Sadly for this last section, the time was missing to make a correct implementati
 With the idea to use the Wikipedia Word2Vec model, in a meaningful way, the author wanted to make a Chatbot using the Doc Embedding Seq2Seq and based on a retrained Word2vec model combining Wikipedia and the corpora from the author Edgar Allan Poe.
 
 \subsection{The current missing pieces in the model}
-It appears that to Gensim while building the Word2Vec model on the Wikipedia Corpus was not using punctuations. Indeed, in the context of word similarities, it does not make sense to keep track of the punctuations in the model. However, in the generation of \gls{nl} texts, punctuations are essential. Intending to achieve a Chatbot talking like Edgar Allan Poe, it implies to add the punctuation to the vocabulary.
+It appears that Gensim, while building the Word2Vec model on the Wikipedia Corpus, was not using punctuations. Indeed, in the context of word similarities, it does not make sense to keep track of the punctuations in the model. However, in the generation of \gls{nl} texts, punctuations are essential. Intending to achieve a Chatbot talking like Edgar Allan Poe implies to add the punctuation to the vocabulary.
