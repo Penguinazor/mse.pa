@@ -8,7 +8,8 @@
 \textbf{Ending date:} 31.05.2019
 
 \section{Initial Plan}
-As the first milestone for the deepening project, the student was required to create an initial plan, with the purpose to help himself and the teacher to visualize the project's main red line.
+\label{plan:initial}
+As the first milestone for the \gls{dp}, the student was required to create an initial plan, with the purpose to help himself and the teacher to visualize the project's main red line.
 \subsection{Tasks}
 \begin{enumerate}
     \setlength\itemsep{0em}
@@ -33,11 +34,11 @@ As the first milestone for the deepening project, the student was required to cr
 \subsection{Milestones}
 \begin{enumerate}
     \setlength\itemsep{0em}
-    \item Initial deepening project plan and specification document
+    \item Initial \gls{dp} plan and specification document
     \item Basic multi-dimensional word embedding space
     \item Basic conversational agent
     \item Basic proactive chatbot
-    \item Deepening project report
+    \item \gls{dp} report
 \end{enumerate}
 
 \subsection{Sprints}
@@ -167,6 +168,7 @@ mymilestone right shift=0pt
 
 
 \section{Effective Plan}
+\label{plan:effective}
 As expected the initial plan served as an initial model, and evolved iteratively based on the student and teacher feedback while exploring the subject.
 \subsection{Tasks}
 \begin{enumerate}
@@ -190,9 +192,9 @@ As expected the initial plan served as an initial model, and evolved iteratively
 \subsection{Milestones}
 \begin{enumerate}
     \setlength\itemsep{0em}
-    \item Initial deepening project plan and specification document
+    \item Initial \gls{dp} plan and specification document
     \item Basic Word2Vec Word Embedding Model
-    \item Conclusions Word2Vec based chatbots
+    \item Conclusions for Word2Vec based chatbots
     \item Ideas to make chatbots proactive
     \item Deliver the report
 \end{enumerate}
@@ -209,6 +211,37 @@ Figure ~\ref{fig:gantt-effective} represents the visual gantt chart for the effe
 \gantttitle{April}{4}
 \gantttitle{May}{4}\\
 \gantttitlelist{1,...,16}{1}\\
+
+%Sprint 1
+\ganttgroup{Sprint 1}{3}{5} \\
+\ganttbar{Tasks 1, 2, 3}{3}{5} \\
+%\ganttlink{elem1}{elem2}
+\ganttmilestone{Milestone 1}{5}\\
+
+%Sprint 2
+\ganttgroup{Sprint 2}{6}{8} \\
+\ganttbar{Task 4, 5, 6}{6}{7} \\
+\ganttbar{Task 6}{8}{8} \\
+\ganttmilestone{Milestone 2}{8}\\
+\ganttlink{elem2}{elem3}
+\ganttlink{elem4}{elem5}
+
+%Sprint 3
+\ganttgroup{Sprint 3}{9}{11} \\
+\ganttbar{Tasks 7, 8}{9}{11} \\
+\ganttmilestone{Milestone 3}{11}\\
+\ganttlink{elem6}{elem7}
+
+%Sprint 4
+\ganttgroup{Sprint 4}{11}{13} \\
+\ganttbar{Tasks 9, 10, 11}{11}{13} \\
+\ganttmilestone{Milestone 4}{13}\\
+\ganttlink{elem9}{elem10}
+
+%Sprint 5
+\ganttgroup{Sprint 5}{14}{16} \\
+\ganttbar{Tasks 12, 13}{14}{16} \\
+\ganttmilestone{Milestone 5}{16}\\
 
 \end{ganttchart}
 %\end{sidewaysfigure}

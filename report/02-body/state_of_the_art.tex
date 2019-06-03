@@ -103,6 +103,7 @@ Health, Weather, Customer Service, or Games are just a few knowledge examples ch
 
 %\begin{minipage}{\textwidth}
 \subsection{General Chatbots}
+\label{sota:chatbots-general}
 Much effort is being made to get chatbots that can perform well simultaneously in various tasks and knowledge. Indeed, general chatbots are not limited to previously learned tasks and subjects; they should also be able to learn and relearn.\\
 
 Those type of chatbots have not been found during the state of the art phase, and are probably by this mean either none-existant at the moment or hidden in laboratories, far from public knowledge. \\
@@ -113,7 +114,7 @@ Note that general chatbots could be scary for lambda people if it starts mimicki
 
 
 \subsection{From \gls{ani} to \gls{agi}}
-On a side, even if it is not part of the deepening project, it is interesting to write a few lines about \gls{ai}. New incredible algorithms outperforming the previous one, and experiments reports are emerging almost every month and redefining the standard of \gls{ai}. Paradigms are shifting and technologically speaking; we are entering a new era of computer-assisted humankind.
+On a side, even if it is not part of the \gls{dp}, it is interesting to write a few lines about \gls{ai}. New incredible algorithms outperforming the previous one, and experiments reports are emerging almost every month and redefining the standard of \gls{ai}. Paradigms are shifting and technologically speaking; we are entering a new era of computer-assisted humankind.
 
 \subsection{\gls{ani}}
 More than a sequential algorithm, narrow artificial intelligence in modern terminology is the definition of \say{being good at something}. \gls{ani} has been made possible with the huge progress in \gls{ml}, the arrival of the \gls{dl}, and the need for humans to store data about everything (\gls{bd}). In medicine, for instance, it is sometimes performing so well, that humans, who spent years studying are left behind by an algorithm trained on large datasets for a few days.
@@ -124,7 +125,7 @@ The next step into the field of \gls{ai}, when supervision has been banned as a 
 
 
 \section{\gls{nlp}}
-Present in our daily lives, this technology is used massively to automate the extract information from human communication. In other words, it is seen as the given skill to machines to comprehend human language.
+Present in our daily lives, this technology is used massively to automate the extraction of information from human communication. In other words, it is seen as the given skill to machines to comprehend human language.
 
 \paragraph{Examples}
 The following is an non-exhaustive list of \gls{nlp} use:
@@ -134,15 +135,15 @@ The following is an non-exhaustive list of \gls{nlp} use:
     \item Translation into foreign languages
     \item Voice recognition
     \item Spam filters
-    \item Interpret written queries
-    \item Generate the responses
+    \item Interpreting written queries
+    \item Generation of the responses
 \end{itemize}
 
 \subsection{\gls{nl}}
-Naively, it is the language naturally used by humans. The goal of the \gls{nlp} is to mimic the \gls{nl} to create a human-like verbal interaction. However, it is not an easy task as it is nearly not possible to teach a machine to talk like a human. Indeed, even if a machine was given the same language rules as humans, they do not understand by themselves, they are just applying the rules, which results in a problem during ambiguities. It would be necessary to sequentially teach the missing pieces of information, which would result in an almost an unlimited amount of conditions.
+Naively, it is the language naturally used by humans. The goal of the \gls{nlp} is to mimic the \gls{nl} to create a human-like verbal interaction. However, it is not an easy task as it is nearly not possible to teach a machine to talk like a human. Indeed, even if machine were given the same language rules as humans, they do not understand by themselves, and are just applying the provided rules resulting in a problem during conversational ambiguities. It would be necessary to sequentially teach the missing pieces of information, which would result in an almost an unlimited amount of conditions.
 
 \paragraph{\gls{nl} decomposition}
-Beyond the grammar and orthography, human language is composed of an incredible amount of subtleties, which makes sense most of the time intuitively for humans, but not for machines. To help understand the complexity behind \gls{nl}, the following are list expresses the foundation of human language:
+Beyond the grammar and orthography, human language is composed of an incredible amount of subtleties, which makes sense most of the time intuitively for humans, but not for machines. To help understand the complexity behind \gls{nl}, the following list expresses the foundation of human language:
 
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -150,7 +151,7 @@ Beyond the grammar and orthography, human language is composed of an incredible 
     \item Morphology: maintain a structure and the content of word forms
     \item Phonology: sounds used to express words
     \item Syntax: rules applied to the bag of words to create valid texts
-    \item Pragmatics: how the context influences the meaning words
+    \item Pragmatics: how the context influences the meaning of words
 \end{itemize}
 
 
@@ -168,19 +169,19 @@ Most of the following technics have been developed in the \gls{ir} field.
     \item Tokenization: Split the sentences into words.
     \item Tagging: Based on a pre-made dictionary, it gives a new layer of meaning to the word, such as: \textit{verb, adverb, noun, people name, locations, number, etc.}
     \item Dictionary: Use of tokenized words to build a dictionary, which could contain the word occurrences.
-    \item Stop Words: Ignoring words only used as liaisons, and does not contain information, such as: \textit{and, or, etc.}
+    \item Stop Words: Ignoring words only used as liaisons, and not containing information, such as: \textit{and, or, etc.}
     \item Stemming: Uniformizing words to their root by removing the prefix and suffix, such as: \textit{remake and loveable}.
     \item Lemmatization: Replace the words to their base form, such as \textit{conjugated verb}.
 \end{itemize}
 
 \subsection{\gls{nlp} declensions}
-Further, into the field of \gls{nlp}, it is today commonly split into two groups:
+Further into the field of \gls{nlp}, it is today commonly split into two groups:
 
 \paragraph{\gls{nlu}}
 It is a subdivision of \gls{dm}, and it involves the processing of the text by analyzing its content by extracting relevant information, usually called keywords.
 
 \paragraph{\gls{nlg}}
-In combination with \gls{nlu}, often applied to text classification, \gls{nlg} is useful to generate custom sentences using custom keyword extracted to make the response to a query even more relevant and usually keeps track of the context.
+In combination with \gls{nlu}, often applied to text classification, \gls{nlg} is useful to generate custom sentences, using custom keyword extracted to make the response to a query even more relevant and usually keeps track of the context.
 
 
 \section{Word Embedding}
@@ -204,7 +205,7 @@ Published Google in 2013, Word2Vec\cite{article:word2vec}, probably became, the 
 
 \subsection{Gensim Framework}
 \label{stoa:gensim}
-Since its publication in 2013, Word2Vec\cite{article:word2vec} various actors implemented the algorithm and companies like RaRe Technologies\cite{company:rare-technologies}, specialized in \gls{nlp}, made it easier for Scientist and Hobbyists to jump right in. Which probably influenced increased its popularity by making it accessible for the community instead of big companies, institutions only. In the case of this deepening project, the author will be focusing on the framework made available by RaRe Technologies and more specifically by RaRe Consulting\cite{company:rare-consulting}, Gensim\cite{article:rehurek_lrec}. Other frameworks and solutions are available, they are in the end implementing the same algorithm generating a Word2Vec model by capturing the context of the words, but they are different by their language and their different integration with custom features.\\
+Since its publication in 2013, Word2Vec\cite{article:word2vec} various actors implemented the algorithm and companies like RaRe Technologies\cite{company:rare-technologies}, specialized in \gls{nlp}, made it easier for Scientist and Hobbyists to jump right in. Which probably influenced increased its popularity by making it accessible for the community instead of big companies, institutions only. In the case of this \gls{dp}, the author will be focusing on the framework made available by RaRe Technologies and more specifically by RaRe Consulting\cite{company:rare-consulting}, Gensim\cite{article:rehurek_lrec}. Other frameworks and solutions are available, they are in the end implementing the same algorithm generating a Word2Vec model by capturing the context of the words, but they are different by their language and their different integration with custom features.\\
 
 Gensim is a python implementation of Word2Vec, and it is not a general purpose \gls{ml} or even \gls{dl} framework. However, in order of magnitude, it does one thing, but does it very well, as it does its job faster that Tensorflow\cite{article:tensorflow2015-whitepaper} for instance.
 
@@ -311,10 +312,12 @@ With the current market and institutional need to make everything \gls{dl}, the 
 \section{Beyond Word Embedding}
 As \gls{nlp} usage increases over the years, Word Embedding technics and its extensions are becoming increasingly more sophisticated and are getting closer to human-like generalization. As controversially suggested by Geoffrey Hinton, famous \gls{dl} researcher, it would be possible to get to human-like conversational capabilities via a method he calls Thought Vectors \cite{article:thought2vec-geoffrey-hinton}. Without going into exciting details, it implies for the \gls{agi}, at this stage, even if the algorithm does not understand the meaning of the sentences, the reasoning behind a thought would be well enough emulated to make it human-like.
 
-\paragraph{Though Embedding}
+\subsection{Though Embedding}
+\label{sota:though-embedding}
 A vectorized thought would be trained to generate a thought's context. As for Word Embedding and Doc Embedding,  Thought Embedding are linked by a chain of reasoning.
 
 \subsection{Contextual embeddings}
+\label{sota:contextual-embedding}
 Though Embedding paper and implementation is yet to be made, however, progress has been made in the direction with the contextual embeddings Context2Vec\cite{article:context2vec}. It is a bidirectional LSTM\cite{article:lstm} unsupervised model generating a word Embedding based on its occurrence in the sentences, which unlike Adagram[\ref{sec:adagram}] is taking into account order. \\
 
 
@@ -331,7 +334,8 @@ However, Context2Vec does not define Contextual embeddings. New emerging 2019 al
 
 
 \section{Datasets}
-Nowadays, in data engineering, the new gold is data. Luckily, today is driven by \gls{bd}, and almost any kind of data is available to who knows where to look at. For the case of the deepening project, the author is interested in conversational data. Even though the English Wikipedia Dump from 09th May 2019 will be using exclusively, the following is a non-exhaustive list of corpora gathered during the deepening project.
+\label{sota:datasets}
+Nowadays, in data engineering, the new gold is data. Luckily, today is driven by \gls{bd}, and almost any kind of data is available to who knows where to look at. For the case of the \gls{dp}, the author is interested in conversational data. Even though the English Wikipedia Dump from 09th May 2019 will be using exclusively, the following is a non-exhaustive list of corpora gathered during the \gls{dp}.
 
 \begin{itemize}
     \setlength\itemsep{0em}
