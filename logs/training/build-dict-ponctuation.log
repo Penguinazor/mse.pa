@@ -1,0 +1,17 @@
+2019-05-06 21:10:50,759 : INFO : 'pattern' package found; tag filters are available for English
+2019-05-06 21:10:53,201 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2019-05-06 21:10:58,642 : INFO : finished iterating over Wikipedia corpus of 720 documents with 2305151 positions (total 1000 articles, 2306405 positions before pruning articles shorter than 50 words)
+2019-05-06 21:10:58,794 : INFO : built Dictionary(97373 unique tokens: ['abandoning', 'abandonment', 'abdelrahim', 'abdullah', 'ability']...) from 720 documents (total 2305151 corpus positions)
+2019-05-06 21:18:01,884 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2019-05-06 21:18:07,459 : INFO : finished iterating over Wikipedia corpus of 720 documents with 2305151 positions (total 1000 articles, 2306405 positions before pruning articles shorter than 50 words)
+2019-05-06 21:18:07,624 : INFO : built Dictionary(97373 unique tokens: ['abandoning', 'abandonment', 'abdelrahim', 'abdullah', 'ability']...) from 720 documents (total 2305151 corpus positions)
+2019-05-06 21:20:55,713 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2019-05-06 21:21:01,429 : INFO : finished iterating over Wikipedia corpus of 720 documents with 2305151 positions (total 1000 articles, 2306405 positions before pruning articles shorter than 50 words)
+2019-05-06 21:21:01,672 : INFO : built Dictionary(97373 unique tokens: ['abandoning', 'abandonment', 'abdelrahim', 'abdullah', 'ability']...) from 720 documents (total 2305151 corpus positions)
+2019-05-06 21:25:34,670 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2019-05-06 21:25:41,258 : INFO : finished iterating over Wikipedia corpus of 720 documents with 2397690 positions (total 1000 articles, 2398980 positions before pruning articles shorter than 50 words)
+2019-05-06 21:25:41,261 : INFO : built Dictionary(97701 unique tokens: ['a', 'abandoning', 'abandonment', 'abdelrahim', 'abdullah']...) from 720 documents (total 2397690 corpus positions)
+2019-05-06 21:53:33,579 : ERROR : Invalid alias: The name clear can't be aliased because it is another magic command.
+2019-05-06 21:53:33,580 : ERROR : Invalid alias: The name more can't be aliased because it is another magic command.
+2019-05-06 21:53:33,580 : ERROR : Invalid alias: The name less can't be aliased because it is another magic command.
+2019-05-06 21:53:33,580 : ERROR : Invalid alias: The name man can't be aliased because it is another magic command.
